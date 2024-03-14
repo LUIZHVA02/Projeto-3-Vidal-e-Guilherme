@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+    "faixaColorida header header",
+    "faixaColorida main main",
+    "faixaColorida footer footer";
+}
+
+.faixaColorida{
+    position: static;
+    width: 5vw;
+    height: 100vh;
+    background-color: #5B0B9B;
+    z-index: -1;
+}
+
+header{
+    width: 95vw;
+    height: 200px;
+}
+
+.containerHeader{
+    width: 95vw;
+    height: 200px;
+}
+
+main{
+    width: 95vw;
+    height: 200px;
+}
+
+.originalTraducao{
+    width: 95vw;
+    height: 200px;
+}
