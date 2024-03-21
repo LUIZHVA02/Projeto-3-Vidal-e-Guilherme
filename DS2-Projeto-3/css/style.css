@@ -26,6 +26,15 @@ body{
     width: 95vw;
 }
 
+.dark-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+    background-color: black;
+}
+
 header{
     width: 95vw;
     height: 20vh;
@@ -55,7 +64,17 @@ header{
     border-radius: 100%;
     background-color: #5B0B9B;
 }
+.lua{
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-image: url('../Images/lua.png');
+}
 
+.sol{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../Images/sol.png');
+}
 
 main{
     width: 95vw;
@@ -84,6 +103,7 @@ main{
     padding: 10px;
     width: 50vw;
     height: 12vh;
+    justify-content: center;
     font-family: Inter;
     font-size: 32px;
     font-weight: bold;
@@ -93,11 +113,21 @@ main{
     border-bottom:5px solid black;
 }
 
-.imgIdiomaOriginal{
+.inputFraseOriginalDark{
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-bottom:5px solid white;
+}
+
+.selectFrom{
     position: static;
-    margin-left: -5vw;
+    margin-left: -6vw;
     height: 100px;
     width: 100px;
+    color: white;
     border-radius: 100%;
     background-color: #5B0B9B;
 }
@@ -111,7 +141,38 @@ main{
     height: 15vh;
 }
 
+.traducao{
+    padding: 10px;
+    width: 50vw;
+    height: 12vh;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+    color: #5B0B9B;
+    outline: none;
+    border: none;
+    border-bottom:5px solid black;
+}
 
+.traducaoDark{
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-bottom:5px solid white;
+}
+
+.selectTo{
+    position: static;
+    margin-left: -6vw;
+    height: 100px;
+    width: 100px;
+    color: white;
+    border-radius: 100%;
+    background-color: #5B0B9B;
+}
 
 footer{
     display: flex;
@@ -121,9 +182,28 @@ footer{
     width: 95vw;
     height: 15vh;
 }
-footer h1{
+.creditoGUI{
     font-family: Inter;
     font-size: 36px;
     font-weight: bold;
     color: #5B0B9B;
+}
+.creditoGuiDark{
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.creditoVidal{
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: bold;
+    color: #5B0B9B;
+}
+.creditoVidalDark{
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
 }
