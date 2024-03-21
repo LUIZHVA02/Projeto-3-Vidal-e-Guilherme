@@ -7,9 +7,7 @@
 body{
     display: grid;
     grid-template-areas:
-    "faixaColorida header header",
-    "faixaColorida main main",
-    "faixaColorida footer footer";
+    "faixaColorida main-container";
 }
 
 .faixaColorida{
@@ -20,22 +18,112 @@ body{
     z-index: -1;
 }
 
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+}
+
 header{
     width: 95vw;
-    height: 200px;
+    height: 20vh;
 }
 
 .containerHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 95vw;
-    height: 200px;
+    height: 20vh;
 }
+
+.titulo{
+    font-family: Inter;
+    font-size: 96px;
+    font-weight: bold;
+    color: #5B0B9B;
+}
+.mudarTema{
+    position: static;
+    margin-left: 89vw;
+    margin-top: -158px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-color: #5B0B9B;
+}
+
 
 main{
     width: 95vw;
-    height: 200px;
+    height: 60vh;
 }
 
 .originalTraducao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 95vw;
-    height: 200px;
+    height: 60vh;
+}
+
+.containerFraseOriginal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 15vh;
+}
+
+.inputFraseOriginal{
+    padding: 10px;
+    width: 50vw;
+    height: 12vh;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+    color: #5B0B9B;
+    outline: none;
+    border: none;
+    border-bottom:5px solid black;
+}
+
+.imgIdiomaOriginal{
+    position: static;
+    margin-left: -5vw;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-color: #5B0B9B;
+}
+
+.containerTraducao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 15vh;
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 15vh;
+}
+footer h1{
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: bold;
+    color: #5B0B9B;
 }
