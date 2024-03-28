@@ -21,20 +21,13 @@ const countries = {
     "es-ES": "Espanhol"
 };
 
-
 selects.forEach((select) => {
     for (let country in countries) {
-        let selected;
-        if (select.className.includes("selectFrom") && country == "pt-BR") {
-            selected = "selected";
+        const option = document.createElement('option')
 
-        } else if (select.className.includes("selectTo") && country == "en-GB") {
-            selected = "selected";
-        }
-
-        const option = `<option value="${country}" ${selected}>${countries[country]}</option>`;
-
-        select.insertAdjacentHTML("beforeend", option);
+        option.value = country
+        option.textContent = countries[country];
+        select.appendChild(option)
     }
 });
 
@@ -72,4 +65,27 @@ botao.addEventListener("click", () => {
     }
 });
 
+window.addEventListener('DOMContentLoaded', function(e){
+    var botaoEscutar = document.querySelector('#botaoEscutar');
 
+    if(window.SpeechRecognition || window.
+        webkitSpeechRecognition) {
+
+            var SpeechRecognition = SpeechRecognition ||
+            webkitSpeechRecognition;
+
+            var recognition = new SpeechRecognition();
+
+            botaoEscutar.addEventListener('click', function(e){
+                recognition.start();
+
+                recognition.addEventListener('result', (event) =>{
+                    texto.value = event.results[0][0].transcript
+                    traducaoAPI()
+                })
+
+            })
+    }else{
+        alert('O navegador não suporta esta funcionalidade!!');
+    }
+},false);

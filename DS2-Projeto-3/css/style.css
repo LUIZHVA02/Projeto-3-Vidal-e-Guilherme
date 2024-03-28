@@ -8,6 +8,9 @@ body{
     display: flex;
     flex-direction: row;
 }
+.bodyDark{
+    background-color: #000000;
+}
 
 .faixaColorida{
     position: static;
@@ -173,6 +176,24 @@ main{
     color: white;
     border-radius: 100%;
     background-color: #5B0B9B;
+}
+
+.botao{
+    height: 64px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: #5B0B9B;
+    color: white;
+    border: none;
+}
+
+.botaoDark{
+    height: 64px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: white;
+    color: #5B0B9B;
+    border: none;
 }
 
 footer{
