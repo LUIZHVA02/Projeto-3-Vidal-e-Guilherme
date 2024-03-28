@@ -16,6 +16,9 @@ const selectFrom = document.getElementById("selectFrom")
 const countries = {
     "en-GB": "Inglês",
     "pt-BR": "Português",
+    "it-IT": "Italiano",
+    "fr-FR": "Francês",
+    "es-ES": "Espanhol"
 };
 
 
@@ -24,7 +27,7 @@ selects.forEach((select) => {
         let selected;
         if (select.className.includes("selectFrom") && country == "pt-BR") {
             selected = "selected";
-            
+
         } else if (select.className.includes("selectTo") && country == "en-GB") {
             selected = "selected";
         }
@@ -52,14 +55,19 @@ function traducaoAPI() {
         .then((data) => {
             traducao.value = data.responseData.translatedText;
         });
+    if (traducao.value.toLowerCase() == 'alice') {
+        mudarTemaDarkPage()
+    }
 }
+
+mudarTema.addEventListener('click', mudarTemaDarkPage)
 
 botao.addEventListener("click", () => {
     if (texto.value) {
-        traducaoAPI();
+        traducaoAPI()
     } else {
         traducao.value = "";
     }
 });
 
-mudarTema.addEventListener('click', mudarTemaDarkPage)
+
